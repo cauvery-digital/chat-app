@@ -21,6 +21,14 @@ server.listen(PORT, () => {
   console.log(`your server listening at port http://localhost:${PORT}`);
 });
 
+app.get('/', (req,res)=>{
+  res.send({
+  activeStatus: true,
+  error: false,
+  
+  })
+ })
+
 // routes
 import userRoute from "./routes/user.route.js";
 import messageRoute from "./routes/message.route.js";
